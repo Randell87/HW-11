@@ -20,10 +20,23 @@ public class Main {
 
         Author pushkin = new Author("Alexandr", "Pushkin");
         Author tolstoy = new Author("Lev", "Tolstoy");
+        Author test = new Author("Alexandr", "Pushkin");
         Book captainsDaughter = new Book("CaptainsDaughter", pushkin, 1836);
         Book warAndPeace = new Book("WarAndPeace", tolstoy, 1867);
+        Book test1 = new Book("WarAndPeace", tolstoy, 1867);
         System.out.println("warAndPeace.getYear() = " + warAndPeace.getYear());
-        warAndPeace.setYear(1900);
+        //warAndPeace.setYear(1900);
         System.out.println("warAndPeace.getYear() = " + warAndPeace.getYear());
+
+        //Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
+        //Обратите внимание, что toString книги не должен дублировать код из toString автора, а должен делегировать (вызывать) его версию метода.
+
+        System.out.println(captainsDaughter);
+        System.out.println(warAndPeace);
+        System.out.println(captainsDaughter.equals(warAndPeace));
+        System.out.println(pushkin.equals(tolstoy));
+        System.out.println(pushkin.equals(test));
+        System.out.println(warAndPeace.equals(test1));
+        System.out.println(warAndPeace.hashCode());
     }
 }
